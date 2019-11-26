@@ -58,3 +58,42 @@ return car.price;
 })
 priced; //output ["cheap", "expensive"]
 ```
+
+# find helper
+```javascript
+
+let users = [{name : 'bob'}, {name : 'ram'}, {name : 'shyam'}];
+
+//using find to find the particular username in array
+
+users.find(user =>{
+//output : {name : 'ram'}
+return  user.name === 'ram';
+})
+
+//Drawbacks of find helper : find helper stops as soon as the value specied in the return statement is found,
+//In the example below there are two name :'ram' but the find helper stops as soon as it found the name :'ram', id : 1 at user[1]
+//and dosenot search for further expression
+
+let users = [{name : 'bob'}, {name : 'ram' , id :1}, {name : 'shyam'},{name : 'ram'}];
+
+users.find(user =>{
+//output : {name : 'ram' , id :1} 
+return  user.name === 'ram';
+});
+
+
+//complex example find helper
+
+let posts = [{id : 1, title : "new post"},{id : 2 , title : "old post"}];
+let  comment = {postId : 1 , content : "great post"};
+
+function postForComment(posts,comment){
+return posts.find(function(post){
+return posts.id === comment.postId;
+})
+};
+postForComment(posts,comment); //output : {id : 1, title : "new post"}
+
+
+```
