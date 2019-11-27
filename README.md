@@ -1,7 +1,22 @@
 # Baby-Steps-for-Javascript-and-ES6
 This repository is for latest ES6 helper methods and new function implemented in standard version of javascript 
 
-#ES6 foreach(for better code)
+# ES6 (for better code)
+
+
+# Declarations with const and let
+```javascript
+//instead of declaring variable with var we sould declare variable usin const and let for better scope
+//declaring variable with var
+var name = "ram" ;
+
+//declaring variable with let
+let name = "ram";
+//declaring variable with const
+const pi = 22/7;
+```
+
+# foreach
 ```javascript 
 //foreach loop 
 let colors = ['red','green','blue'];
@@ -36,7 +51,7 @@ colors.forEach(color1) ; // pass refrence of color1 function
 
 
 
-#The 'map' Helper
+# The 'map' Helper
 ```javascript
 //'map' helper
 
